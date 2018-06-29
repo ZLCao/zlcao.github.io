@@ -15,9 +15,9 @@ photo: http://iissnan.com/nexus/next/next-schemes.jpg
 
 <!--more-->
 
-# 安装
+## 安装
 
-## <span id="1.1"> 安装 Hexo </span>
+### <span id="1.1"> 安装 Hexo </span>
 
 Hexo 的安装过程可以参考 [hexo.io](https://hexo.io/zh-cn/docs/)，简要的安装过程为：
 1.  安装 [Node.js](https://nodejs.org/)
@@ -27,7 +27,7 @@ Hexo 的安装过程可以参考 [hexo.io](https://hexo.io/zh-cn/docs/)，简要
     $ npm install -g hexo-cli
     ```
 
-## 建站
+### 建站
 
 安装 Hexo 完成后，执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。
 ```sh
@@ -36,7 +36,7 @@ $ cd <folder>
 $ npm install
 ```
 
-## 安装插件
+### 安装插件
 
 生成页面可能依赖一些其他插件：
 *   本地搜索数据库生成器
@@ -53,9 +53,9 @@ $ npm install
     ```
 其中 `--save` 选项会将插件的依赖关系写入 `package.json` 文件，方面以后用 `npm install` 命令一次安装所有依赖的插件。
 
-# 配置
+## 配置
 
-## 主文件配置
+### 主文件配置
 
 修改 `_config.yml` 中的各项自定义项，并添加 Git 部署配置：
 ```yml
@@ -65,7 +65,7 @@ deploy:
   branch: [branch]
 ```
 
-## 主题文件安装与配置
+### 主题文件安装与配置
 
 参考 [NexT 使用文档](http://theme-next.iissnan.com/) ，安装主题并完成自定义配置。
 
