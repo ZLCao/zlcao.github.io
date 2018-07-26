@@ -8,7 +8,7 @@ tags:
 categories:
   - 技术
   - 博客
-photo: http://iissnan.com/nexus/next/next-schemes.jpg
+photo: https://pics-1253593512.image.myqcloud.com/thumbnail/next-schemes.jpg
 ---
 
 终于利用 NexT 模板基于 Hexo 配置好了博客环境，并把 Wordpress 上的几篇博文迁移至此，算是正式入住新家了。在我正式把博客发布到 GitHub Pages 之前，我还要记一下必要的安装步骤，以便日后在各台电脑上移植博客工具。
