@@ -2,7 +2,8 @@
 title: 利用 CloudFlare CDN 给 GitHub Pages 加速
 tags:
   - CloudFlare
-  - hexo
+  - GitHub
+  - Hexo
 categories:
   - 技术
   - 博客
