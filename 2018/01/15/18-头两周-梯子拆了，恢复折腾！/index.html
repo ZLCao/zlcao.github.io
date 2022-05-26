@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>18 头两周 梯子拆了，恢复折腾！ | ZC不在朋友圈</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="FlaskPythonDockerKVMOpenVZ搬瓦工" />
+  
+  
+  
+  
+  <meta name="description" content="公历新年，我偶然地再一次测试搬瓦工的工作情况。尽管之前的几次失败之后我连 dnspod 的域名解析服务都关闭了，以防止监控系统不断对服务器 IP 的访问，但测试发现从境内进行 ping 测试的结果依旧是没有响应。之后我通过官网控制面板的交互式 shell 登陆了服务器，（谢天谢地 bwh1.net 这个域名还可以正常访问），进行了对谷歌域名以及回国的 ping 测试，来确认服务器端的网络运行情况。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="18 头两周 梯子拆了，恢复折腾！">
+<meta property="og:url" content="https://blog.zacha.cc/2018/01/15/18-%E5%A4%B4%E4%B8%A4%E5%91%A8-%E6%A2%AF%E5%AD%90%E6%8B%86%E4%BA%86%EF%BC%8C%E6%81%A2%E5%A4%8D%E6%8A%98%E8%85%BE%EF%BC%81/index.html">
+<meta property="og:site_name" content="ZC不在朋友圈">
+<meta property="og:description" content="公历新年，我偶然地再一次测试搬瓦工的工作情况。尽管之前的几次失败之后我连 dnspod 的域名解析服务都关闭了，以防止监控系统不断对服务器 IP 的访问，但测试发现从境内进行 ping 测试的结果依旧是没有响应。之后我通过官网控制面板的交互式 shell 登陆了服务器，（谢天谢地 bwh1.net 这个域名还可以正常访问），进行了对谷歌域名以及回国的 ping 测试，来确认服务器端的网络运行情况。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pics-1253593512.image.myqcloud.com/18zt/thumb.jpg">
+<meta property="article:published_time" content="2018-01-15T07:49:56.000Z">
+<meta property="article:modified_time" content="2022-05-26T08:33:04.016Z">
+<meta property="article:author" content="Zachary Cao">
+<meta property="article:tag" content="Flask">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="Docker">
+<meta property="article:tag" content="KVM">
+<meta property="article:tag" content="OpenVZ">
+<meta property="article:tag" content="搬瓦工">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pics-1253593512.image.myqcloud.com/18zt/thumb.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="ZC不在朋友圈" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/fashion.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner" 
+   >
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="ZC不在朋友圈" rel="home"> ZC不在朋友圈 </a>
+            
+          </h1>
+          
+          
+            <div class="site-description">/* 我不太愿张扬 || 你未必感兴趣 */</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">首页</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">归档</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">分类</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">标签</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-18-头两周-梯子拆了，恢复折腾！" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+<div class="article-gallery">
+  <div class="article-gallery-photos">
+    
+      <a class="article-gallery-img fancybox" target="_blank" href="https://pics-1253593512.image.myqcloud.com/18zt/thumb.jpg" rel="gallery_cl3myhyt90007uj926o1bfhw5 noopener">
+        <img src="https://pics-1253593512.image.myqcloud.com/18zt/thumb.jpg" itemprop="image">
+      </a>
+    
+  </div>
+</div>
+
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      18 头两周 梯子拆了，恢复折腾！
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2018/01/15/18-%E5%A4%B4%E4%B8%A4%E5%91%A8-%E6%A2%AF%E5%AD%90%E6%8B%86%E4%BA%86%EF%BC%8C%E6%81%A2%E5%A4%8D%E6%8A%98%E8%85%BE%EF%BC%81/" class="article-date">
+	  <time datetime="2018-01-15T07:49:56.000Z" itemprop="datePublished">一月 15, 2018</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>, <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/VPS/">VPS</a>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>公历新年，我偶然地再一次测试搬瓦工的工作情况。尽管之前的几次失败之后我连 dnspod 的域名解析服务都关闭了，以防止监控系统不断对服务器 IP 的访问，但测试发现从境内进行 <code>ping</code> 测试的结果依旧是没有响应。之后我通过官网控制面板的交互式 shell 登陆了服务器，（谢天谢地 <a target="_blank" rel="noopener" href="https://bwh1.net/">bwh1.net</a> 这个域名还可以正常访问），进行了对谷歌域名以及回国的 <code>ping</code> 测试，来确认服务器端的网络运行情况。就在这次简单的测试之后，奇迹发生了，突然间国内对服务器的 <code>ping</code> 也有了响应！于是，就这样莫名其妙的，我的服务器起死回生了，围绕服务器的折腾又得以恢复。</p>
+<span id="more"></span>
+
+<p>最近近半个月的折腾经历，用数个彻夜不眠折腾的夜晚告诉我一个简单又深刻的道理：文档一定要看清楚啊，服务条款也不例外，不然都是瞎折腾！下面就细数一下最近折腾中走的弯路。</p>
+<h2 id="缘起"><a href="#缘起" class="headerlink" title="缘起"></a>缘起</h2><p>缘起对 <a target="_blank" rel="noopener" href="http://xingyaoyao.ml/">xingyaoyao.ml</a> 这个网页的 python 改写。之前这是一个完全静态的网页，照片手动上传七牛云，分别上传缩略图和大图各一份，然后把链接手动添加到静态的 html 文件中。这就导致每次手机拍完的照片上传十分麻烦，需要额外的导入电脑（个人电脑上的 iCloud 照片流不工作很久了），按照统一的规则重命名……而之前邓老师和<a target="_blank" rel="noopener" href="http://answ.me/">小安</a>都曾分别利用 <a target="_blank" rel="noopener" href="http://flask.pocoo.org/">Flask</a> 和 <a target="_blank" rel="noopener" href="https://www.djangoproject.com/">Django</a> 写过个人博客。简单对比后，我决定选择 Flask 作为这个项目的基础，原因很简单，与 Django 相比，它更轻巧，文档更简洁，上手更容易，关于文件上传已经给出了简单的模板可以直接使用（尽管功能和界面都十分简陋）。同时，大概研究了一下七牛云，发现七牛云的对象存储中提供了一个<strong>图片样式</strong>功能，配合<a target="_blank" rel="noopener" href="https://developer.qiniu.com/kodo/kb/1327/what-is-the-style-and-the-style-separators">样式分隔符</a>可以十分方便地对原图进行简单处理，省去了上传缩略图的步骤。</p>
+<h2 id="经过"><a href="#经过" class="headerlink" title="经过"></a>经过</h2><h3 id="virtualenv"><a href="#virtualenv" class="headerlink" title="virtualenv"></a>virtualenv</h3><p>先说一说 python 虚拟环境。利用 python 虚拟环境，可以实现在不同虚拟环境中安装不同版本的包，当然，对我这种有洁癖的人来说，打包安装在一个可以一次删除的文件夹中，绝对比在系统中装一堆库要舒服得多。具体安装过程，首先要安装 <code>pip</code>，并利用 <code>pip</code> 安装 <code>virtualenv</code>。这两步需要管理员权限。虚拟环境可以安装在任意位置，Flask 的文档中，虚拟环境被指导安装在项目根目录的 <code>venv</code> 文件夹下，而 Django 的文档中，则建议把各种虚拟环境放在 <code>~/.virtualenvs/project</code> 文件夹下。先入为主，而且虚拟环境与项目绑定在一个文件夹似乎也更方面管理。初始化一个虚拟环境的方法很简单：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> /path/to/app</span><br><span class="line">$ virtualenv -p PYTHON_EXE venv</span><br></pre></td></tr></table></figure>
+<p>其中 <code>PYTHON_EXE</code> 对应 python 的版本如 <code>python3</code>。之后便是激活到虚拟环境：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">source</span> venv/bin/activate</span><br></pre></td></tr></table></figure>
+<p>要退出虚拟环境只要直接执行</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ deactivate</span><br></pre></td></tr></table></figure>
+<p>即可。我们还可以在项目根目录下新建 <code>requirements.txt</code> 文件，写入需要安装的 python 包，利用</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pip install -r requirements.txt</span><br></pre></td></tr></table></figure>
+<p>就可以直接安装项目依赖的全部包，方便对虚拟环境的移植。</p>
+<h3 id="部署难"><a href="#部署难" class="headerlink" title="部署难"></a>部署难</h3><p>经过两天左右的研究，基本按照 Flask 的官方<a target="_blank" rel="noopener" href="http://flask.pocoo.org/docs/0.12/quickstart/">快速入门教程</a>写出了本地可以运行的项目。满心以为很容易就可以移植到搬瓦工的服务器上，却发现遇到了诸多问题。首先遇到的问题是 Apache 服务器安装了 <code>wsgi</code> 模块后无法启动，查看日志一直看不明白错误，后来才发现日志最新的部分在底部，而我……查看日志条目居然不看前面的时间！原来是 <code>wsgi</code> 和 <code>python</code> 这两个模块无法同时开启。关闭 <code>python</code> 模块后，按照官方教程写的 <code>app.wsgi</code> 文件要求导入的 <code>app.py</code> 模块却总也找不到，还出现其他许多难以解决的错误。后来阅读了 <code>mod_wsgi</code> 的<a target="_blank" rel="noopener" href="https://modwsgi.readthedocs.io/en/develop/">官方文档</a>，这些问题都迎刃而解。而之所以能阅读到这份文档，全拜经过一番折腾后转战 Django 框架所赐。在 Django 的官方文档关于利用 <code>mod_wsgi</code> 在 Apache 上进行部署的<a target="_blank" rel="noopener" href="https://docs.djangoproject.com/en/2.0/howto/deployment/wsgi/modwsgi/">文档</a>里，我终于阅读到了这份详细的官方文档。最终，Apache 服务器进行如下配置：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;VirtualHost *:80&gt;</span><br><span class="line">    # 绑定域名</span><br><span class="line">    ServerName project.com</span><br><span class="line">    ServerAlias www.project.com</span><br><span class="line"></span><br><span class="line">    # WSGI 守护进程名，用户和组权限，线程数，python虚拟环境目录，python模块目录（用于寻找app.py）</span><br><span class="line">    WSGIDaemonProcess myapp user=username group=groupname threads=5 python-home=/path/to/app/venv python-path=/path/to/app</span><br><span class="line">    # WSGI 搜索 app.wsgi 的位置</span><br><span class="line">    WSGIScriptAlias / /path/to/app/app.wsgi</span><br><span class="line"></span><br><span class="line">    &lt;Directory /path/to/app&gt;</span><br><span class="line">        WSGIProcessGroup myapp</span><br><span class="line">        WSGIApplicationGroup %&#123;GLOBAL&#125;</span><br><span class="line">        Require all granted</span><br><span class="line">    &lt;/Directory&gt;</span><br><span class="line">&lt;/VirtualHost&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="虚拟机"><a href="#虚拟机" class="headerlink" title="虚拟机"></a>虚拟机</h3><p>如果说与 <code>mod_wsgi</code> 配置相关的问题，都可以通过阅读文档来解决，那么服务器上 Flask 调试时遇到的诡异问题就不是阅读文档可以解决的了。在服务器上我尝试利用 <code>flask run</code> 命令进行简单调试，可是每当 python 处理完一次访问请求，就停止响应，在终端 <code>ctrl+c</code> 中断后，返回一个等待键盘输入的错误，才能响应下一次的页面请求。在 Proxmox VE 上，我利用 Debian 官方镜像和 Proxmox VE 上提供的 Debian 模板，分别安装了 QEMU 虚拟机和 LXC 容器虚拟环境。发现并没有类似的问题，因此问题的源头不是 Debian 本身。于是我将问题的源头锁定在了搬瓦工 OpenVZ 的内核过于老旧上，尽管 Flask 官方并没有对内核版本作出任何限制。</p>
+<p>基于 OpenVZ 方案提供的 VPS，本质上是一种容器，没有独立的内核，而依附于 Host 的内核。如果需要完整的拥有独立内核的操作系统，则要考虑安装虚拟机。于是我又花了一个周末研究 KVM 和 QEMU，以期在 VPS 上再安装一个完整的虚拟机，来解决这一问题。这期间还研究了 Docker，希望可以利用 Docker 打包部署项目。可了解了 Docker 的原理后我发现这并不可行。Docker 本质上是一个精简的容器，也是运行在原内核之上的，并不能解决内核版本过老带来的问题。更重要的，在我初步学会在本地的 Arch Linux 上安装 Docker 后，惊奇地发现服务器上甚至不能利用 <code>apt-get</code> 安装 Docker。而搬瓦工官网的 KVM or OpenVZ 页面上赫然写着：</p>
+<p><img src="https://pics-1253593512.image.myqcloud.com/18zt/kvm_openvz.PNG"></p>
+<p>利用 Docker 部署的想法十分无奈只能作罢。继续考虑在服务器上安装虚拟机，参考 Debian Wiki 上关于 <a target="_blank" rel="noopener" href="https://wiki.debian.org/KVM">KVM</a> 和 <a target="_blank" rel="noopener" href="https://wiki.debian.org/QEMU">QEMU</a> 的部分进行了安装，可是 KVM 安装后守护进程无法启动，更诡异的是 QEMU 虚拟机尝试安装 Arch Linux 和 Debian，在过了 Grub 选择安装选项画面，开始安装过程后不久，虚拟机就不断闪退。Debian 安装过程中每次闪退的时间点还各不相同。在百度上搜了半天，最后在搬瓦工的服务条款里找到了答案：禁止嵌套虚拟化！</p>
+<p><img src="https://pics-1253593512.image.myqcloud.com/18zt/tos.PNG"></p>
+<p>毕竟凤凰城 20 刀一年的传家宝实在太过优惠，也只提供 OpenVZ 方案可供选择。其他同时提供 KVM 和 OpenVZ 方案的产品，可是贵多了，要是允许自己在容器上装个虚拟机，还赚不赚钱了。</p>
+<h2 id="结局"><a href="#结局" class="headerlink" title="结局"></a>结局</h2><p>结局就是，当我转战 Django，并在其文档里找到 <code>mod_wsgi</code> 的官方文档链接，配置好 Apache 的设置，成功调用 <code>mod_wsgi</code> 模块后，不仅 Django 正常运作，Flask 项目在服务器上通过 wsgi 调用以后也没有被奇怪的 bug 卡住。虽然不知道这究竟是为什么，并且为了部署这个项目兜了老大一个圈子，但最终，这个项目总算大致圆满的上线了。下面的计划是美化一下上传界面，更远期的，写一个管理界面 —— 我觉得这个可能难以实现。另外需求的功能多了，也许转战 Django 会更方便一些吧，不过 Django 的官方文档实在太长了。</p>
+<p>生命不息，折腾不止，继续前行！</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>, <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/VPS/">VPS</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Docker/" rel="tag">Docker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Flask/" rel="tag">Flask</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/KVM/" rel="tag">KVM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OpenVZ/" rel="tag">OpenVZ</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%90%AC%E7%93%A6%E5%B7%A5/" rel="tag">搬瓦工</a></li></ul>
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/07/26/%E5%8D%9A%E5%AE%A2%E4%B8%8E%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E4%B8%80%E4%BA%9B%E5%8F%98%E6%9B%B4/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          博客与服务器的一些变更
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/01/01/18-%E6%96%B0%E5%B9%B4%E7%AC%AC%E4%B8%80%E6%9B%B4/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">18 新年第一更</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%98%E8%B5%B7"><span class="nav-number">1.</span> <span class="nav-text">缘起</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%8F%E8%BF%87"><span class="nav-number">2.</span> <span class="nav-text">经过</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#virtualenv"><span class="nav-number">2.1.</span> <span class="nav-text">virtualenv</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E9%9A%BE"><span class="nav-number">2.2.</span> <span class="nav-text">部署难</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%99%9A%E6%8B%9F%E6%9C%BA"><span class="nav-number">2.3.</span> <span class="nav-text">虚拟机</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E5%B1%80"><span class="nav-number">3.</span> <span class="nav-text">结局</span></a></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2022 ZC不在朋友圈 All Rights Reserved.
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+    
+<div style="display: none;">
+  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+<script src="/js/bootstrap.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+  
+
+</body>
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hipaper 主题配置心得 | ZC不在朋友圈</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="HexoGitHub" />
+  
+  
+  
+  
+  <meta name="description" content="五一在家，研究了一下 Hexo 的 hipaper 主题。这是我在官网上第一眼看中的主题，当初由于对 Hexo 不熟悉，直接使用遇到了不少问题，因此选择了中文文档十分详细的 NexT 主题作为替代。随着对 Hexo 一些文件配置的逐步深入，并查看了项目 issues，我再次尝试为博客适配这个主题。 Hipaper 主题主要有以下几个问题需要解决：  分类和标签页面错误 标题中英文字体比中文高出很多">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hipaper 主题配置心得">
+<meta property="og:url" content="https://blog.zacha.cc/2017/05/02/Hipaper-%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E5%BF%83%E5%BE%97/index.html">
+<meta property="og:site_name" content="ZC不在朋友圈">
+<meta property="og:description" content="五一在家，研究了一下 Hexo 的 hipaper 主题。这是我在官网上第一眼看中的主题，当初由于对 Hexo 不熟悉，直接使用遇到了不少问题，因此选择了中文文档十分详细的 NexT 主题作为替代。随着对 Hexo 一些文件配置的逐步深入，并查看了项目 issues，我再次尝试为博客适配这个主题。 Hipaper 主题主要有以下几个问题需要解决：  分类和标签页面错误 标题中英文字体比中文高出很多">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pics-1253593512.image.myqcloud.com/thumbnail/hipaper-preview.png">
+<meta property="article:published_time" content="2017-05-01T16:14:00.000Z">
+<meta property="article:modified_time" content="2022-05-26T08:33:04.016Z">
+<meta property="article:author" content="Zachary Cao">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="GitHub">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pics-1253593512.image.myqcloud.com/thumbnail/hipaper-preview.png">
+  
+    <link rel="alternate" href="/atom.xml" title="ZC不在朋友圈" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/fashion.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner" 
+   >
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="ZC不在朋友圈" rel="home"> ZC不在朋友圈 </a>
+            
+          </h1>
+          
+          
+            <div class="site-description">/* 我不太愿张扬 || 你未必感兴趣 */</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">首页</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">归档</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">分类</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">标签</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-Hipaper-主题配置心得" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+<div class="article-gallery">
+  <div class="article-gallery-photos">
+    
+      <a class="article-gallery-img fancybox" target="_blank" href="https://pics-1253593512.image.myqcloud.com/thumbnail/hipaper-preview.png" rel="gallery_cl3myhytk000guj9220u1617h noopener">
+        <img src="https://pics-1253593512.image.myqcloud.com/thumbnail/hipaper-preview.png" itemprop="image">
+      </a>
+    
+  </div>
+</div>
+
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      Hipaper 主题配置心得
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/05/02/Hipaper-%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E5%BF%83%E5%BE%97/" class="article-date">
+	  <time datetime="2017-05-01T16:14:00.000Z" itemprop="datePublished">五月 2, 2017</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>, <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/%E5%8D%9A%E5%AE%A2/">博客</a>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>五一在家，研究了一下 Hexo 的 <a target="_blank" rel="noopener" href="https://github.com/iTimeTraveler/hexo-theme-hipaper">hipaper</a> 主题。这是我在官网上第一眼看中的主题，当初由于对 Hexo 不熟悉，直接使用遇到了不少问题，因此选择了中文文档十分详细的 NexT 主题作为替代。随着对 Hexo 一些文件配置的逐步深入，并查看了项目 issues，我再次尝试为博客适配这个主题。</p>
+<p>Hipaper 主题主要有以下几个问题需要解决：</p>
+<ol>
+<li>分类和标签页面错误</li>
+<li>标题中英文字体比中文高出很多</li>
+<li>顶部副标题不显示</li>
+<li>边栏社交图标数目太少</li>
+<li>不知道怎样生成文章头图</li>
+</ol>
+<span id="more"></span>
+
+<h2 id="分类和标签页面"><a href="#分类和标签页面" class="headerlink" title="分类和标签页面"></a>分类和标签页面</h2><p>分类和标签页面需要在相应的页面 <code>index.md</code> 文件中插入 <code>layout</code> 属性：</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">layout: &quot;categories/tags&quot;</span><br></pre></td></tr></table></figure>
+
+<h2 id="中英文字体问题"><a href="#中英文字体问题" class="headerlink" title="中英文字体问题"></a>中英文字体问题</h2><p>这个问题主要是英文 oswald 字体与中文雅黑字体不匹配造成的，可以通过替换字体的办法解决。参考作者的另一个主题 <a target="_blank" rel="noopener" href="https://github.com/iTimeTraveler/hexo-theme-hiero">hiero</a>，用其中的 yanone 字体进行替换。具体方法是到项目主页分别搜索这两个字体，找到相关文件，进行修改和替换。</p>
+<h2 id="顶部副标题"><a href="#顶部副标题" class="headerlink" title="顶部副标题"></a>顶部副标题</h2><p>此主题顶部副标题显示的是 <code>_config.yml</code> 文件的 <code>description</code> 属性，而非 <code>subtitle</code> 属性。</p>
+<h2 id="边栏社交图标"><a href="#边栏社交图标" class="headerlink" title="边栏社交图标"></a>边栏社交图标</h2><p>原本设计的社交图标是一行六个，自己凑了五个就再也凑不出了。另外，在排满六个图标的情况下，最后一个图标右侧还有一小段空隙。我们打开 <code>source/css/fashion.css</code> 文件，找到 <code>.widget-social-icons</code> 相关代码，作如下修改：</p>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">/* Widget Social Icons */</span><br><span class="line">.widget-social-icons li &#123;</span><br><span class="line">	float: left;</span><br><span class="line"><span class="deletion">-	margin: 5px 10px 5px 0;</span></span><br><span class="line"><span class="addition">+	margin: 5px 5px 5px 5px;</span></span><br><span class="line">	text-align: center;</span><br><span class="line">	&#125;</span><br><span class="line">.widget-social-icons li a &#123;</span><br><span class="line">	display: block;</span><br><span class="line">	&#125;</span><br><span class="line">.widget-social-icons li a [class^=&quot;fa&quot;]:before &#123;</span><br><span class="line"><span class="deletion">-	width: 40px;</span></span><br><span class="line"><span class="addition">+	width: 50px;</span></span><br><span class="line">	margin: 0;</span><br><span class="line">	color: #fff;</span><br><span class="line"><span class="deletion">-	font-size: 20px;</span></span><br><span class="line"><span class="deletion">-	line-height: 40px;</span></span><br><span class="line"><span class="addition">+	font-size: 30px;</span></span><br><span class="line"><span class="addition">+	line-height: 50px;</span></span><br><span class="line">	background: #333;</span><br><span class="line">	&#125;</span><br><span class="line">.widget-social-icons li a:hover [class^=&quot;fa&quot;]:before &#123;</span><br><span class="line">	background: #1fa0ae;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="文章头图"><a href="#文章头图" class="headerlink" title="文章头图"></a>文章头图</h2><p>文章头图可以是单张图片，也可以是一组图片组成的相册，相册可以点开以查看。单张图片的插入方法是</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">photo: <span class="language-xml"><span class="tag">&lt;<span class="name">image_url</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<p>相册的插入方法与之类似</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">photos:</span><br><span class="line"><span class="bullet">  -</span> <span class="language-xml"><span class="tag">&lt;<span class="name">image_url_1</span>&gt;</span></span></span><br><span class="line"><span class="bullet">  -</span> <span class="language-xml"><span class="tag">&lt;<span class="name">image_url_2</span>&gt;</span></span></span><br><span class="line"><span class="bullet">  -</span> ...</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>, <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/%E5%8D%9A%E5%AE%A2/">博客</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GitHub/" rel="tag">GitHub</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/06/18/17-%E6%98%9F%E9%81%A5%E9%81%A5%E7%94%9F%E6%97%A5/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          17 星遥遥生日
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/05/02/17-%E6%B8%85%E6%98%8E-%E5%A9%BA%E6%BA%90/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">17 清明 @ 婺源</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E7%B1%BB%E5%92%8C%E6%A0%87%E7%AD%BE%E9%A1%B5%E9%9D%A2"><span class="nav-number">1.</span> <span class="nav-text">分类和标签页面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%AD%E8%8B%B1%E6%96%87%E5%AD%97%E4%BD%93%E9%97%AE%E9%A2%98"><span class="nav-number">2.</span> <span class="nav-text">中英文字体问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%B6%E9%83%A8%E5%89%AF%E6%A0%87%E9%A2%98"><span class="nav-number">3.</span> <span class="nav-text">顶部副标题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%B9%E6%A0%8F%E7%A4%BE%E4%BA%A4%E5%9B%BE%E6%A0%87"><span class="nav-number">4.</span> <span class="nav-text">边栏社交图标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E7%AB%A0%E5%A4%B4%E5%9B%BE"><span class="nav-number">5.</span> <span class="nav-text">文章头图</span></a></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2022 ZC不在朋友圈 All Rights Reserved.
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+    
+<div style="display: none;">
+  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+<script src="/js/bootstrap.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+  
+
+</body>
+</html>

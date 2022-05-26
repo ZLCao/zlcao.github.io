@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>博客与服务器的一些变更 | ZC不在朋友圈</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="里程碑服务器CloudFlare" />
+  
+  
+  
+  
+  <meta name="description" content="博客与服务器上的一些网页建立起来也有一些日子了，最近发生了一些变化，逐一记录如下。 域名更改由于 freenom 的域名到期，重新申请了两个免费域名 zachary.tk 和 xingyaoyao.tk。免费的域名似乎是不怎么靠谱，之前的域名 zachary.ml 在到期之前，自动被收回。两个域名到期之后，都并不能立即免费续费，而是以域名拼写有特殊含义为由收取费用。zachary.ml 这个域名至">
+<meta property="og:type" content="article">
+<meta property="og:title" content="博客与服务器的一些变更">
+<meta property="og:url" content="https://blog.zacha.cc/2018/07/26/%E5%8D%9A%E5%AE%A2%E4%B8%8E%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E4%B8%80%E4%BA%9B%E5%8F%98%E6%9B%B4/index.html">
+<meta property="og:site_name" content="ZC不在朋友圈">
+<meta property="og:description" content="博客与服务器上的一些网页建立起来也有一些日子了，最近发生了一些变化，逐一记录如下。 域名更改由于 freenom 的域名到期，重新申请了两个免费域名 zachary.tk 和 xingyaoyao.tk。免费的域名似乎是不怎么靠谱，之前的域名 zachary.ml 在到期之前，自动被收回。两个域名到期之后，都并不能立即免费续费，而是以域名拼写有特殊含义为由收取费用。zachary.ml 这个域名至">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pics-1253593512.image.myqcloud.com/thumbnail/https.jpg">
+<meta property="article:published_time" content="2018-07-26T14:52:27.000Z">
+<meta property="article:modified_time" content="2022-05-26T08:33:04.016Z">
+<meta property="article:author" content="Zachary Cao">
+<meta property="article:tag" content="里程碑">
+<meta property="article:tag" content="服务器">
+<meta property="article:tag" content="CloudFlare">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pics-1253593512.image.myqcloud.com/thumbnail/https.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="ZC不在朋友圈" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/fashion.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner" 
+   >
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="ZC不在朋友圈" rel="home"> ZC不在朋友圈 </a>
+            
+          </h1>
+          
+          
+            <div class="site-description">/* 我不太愿张扬 || 你未必感兴趣 */</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">首页</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">归档</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">分类</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">标签</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-博客与服务器的一些变更" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+<div class="article-gallery">
+  <div class="article-gallery-photos">
+    
+      <a class="article-gallery-img fancybox" target="_blank" href="https://pics-1253593512.image.myqcloud.com/thumbnail/https.jpg" rel="gallery_cl3myhytu000suj920i6w6mxv noopener">
+        <img src="https://pics-1253593512.image.myqcloud.com/thumbnail/https.jpg" itemprop="image">
+      </a>
+    
+  </div>
+</div>
+
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      博客与服务器的一些变更
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2018/07/26/%E5%8D%9A%E5%AE%A2%E4%B8%8E%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E4%B8%80%E4%BA%9B%E5%8F%98%E6%9B%B4/" class="article-date">
+	  <time datetime="2018-07-26T14:52:27.000Z" itemprop="datePublished">七月 26, 2018</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>, <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/VPS/">VPS</a>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>博客与服务器上的一些网页建立起来也有一些日子了，最近发生了一些变化，逐一记录如下。</p>
+<h2 id="域名更改"><a href="#域名更改" class="headerlink" title="域名更改"></a>域名更改</h2><p>由于 freenom 的域名到期，重新申请了两个免费域名 <a target="_blank" rel="noopener" href="https://zachary.tk/">zachary.tk</a> 和 <a target="_blank" rel="noopener" href="https://xingyaoyao.tk/">xingyaoyao.tk</a>。免费的域名似乎是不怎么靠谱，之前的域名 zachary.ml 在到期之前，自动被收回。两个域名到期之后，都并不能立即免费续费，而是以域名拼写有特殊含义为由收取费用。zachary.ml 这个域名至今仍未恢复免费。等此两个域名过期，大概不会再申请 freenom 的免费域名了，考虑在万网买。</p>
+<p>另外，之前博客里出现过的链接，就不修改了。一来一篇篇检查麻烦，有了疏漏更是不好；二来用过的域名，留下些痕迹也是不错的。</p>
+<h2 id="搬瓦工服务器-IP-更改"><a href="#搬瓦工服务器-IP-更改" class="headerlink" title="搬瓦工服务器 IP 更改"></a>搬瓦工服务器 IP 更改</h2><p>大概是一段时间没有被墙，大意了，经常电脑挂着 shadowsocks 几天都不退出后台。7 月初发现服务器又一次无法访问了。好在搬瓦工现在推出了每十周免费更换一次 IP 的服务，虽然失败了几次，但某天半夜试了一下意外的成功了。丢个<a target="_blank" rel="noopener" href="https://www.bandwagonhost.net/1925.html">链接</a>。</p>
+<p>嗯，以后还是要勤下线。另外，以前蹭我免费梯子的同学，就不主动告知了。</p>
+<span id="more"></span>
+
+<h2 id="向-HTTPS-迁移"><a href="#向-HTTPS-迁移" class="headerlink" title="向 HTTPS 迁移"></a>向 HTTPS 迁移</h2><p>据说 chrome 68 要把 HTTP 网页标记为不安全了。虽然我很少使用 chrome，不过 HTTPS 已然是大势所趋了。一开始在自己的服务器上尝试部署 <a target="_blank" rel="noopener" href="https://letsencrypt.org/">Let’s Encrypt</a>， 然而对于 python 项目，签名工具 <a target="_blank" rel="noopener" href="https://certbot.eff.org/">certbot</a> 要实现自动更新证书似乎有一些麻烦，最终放弃了。</p>
+<h3 id="CloudFlare"><a href="#CloudFlare" class="headerlink" title="CloudFlare"></a>CloudFlare</h3><p>百度了一天，赫然发现 <a target="_blank" rel="noopener" href="https://www.cloudflare.com/">CloudFlare</a> 很是符合我的要求。它既可以作为 DNS，又可以当作一个 CDN，其基本原理可见<a target="_blank" rel="noopener" href="https://support.cloudflare.com/hc/en-us/articles/205177068-Step-1-How-does-Cloudflare-work-">官网</a>。</p>
+<p><img src="https://pics-1253593512.image.myqcloud.com/18qy/cloudflare.png"></p>
+<p>其免费功能已经异常之强大了，利用 <a target="_blank" rel="noopener" href="https://support.cloudflare.com/hc/en-us/articles/200170416">Flexible SSL</a>，实际服务器只需要部署 HTTP 服务，用户与 CloudFlare 服务器之间建立 SSL 链接，而 CloudFlare 与实际服务器之间则利用 HTTP 进行通讯。虽然这样的所谓安全有些自欺欺人，不过好歹是让浏览器去掉了恼人的安全警示。不过 Flexible SSL 方案似乎会遇到 <a target="_blank" rel="noopener" href="https://support.cloudflare.com/hc/en-us/articles/115000219871">redirect loop</a> 这一问题，等遇到再想办法解决。</p>
+<p>CloudFlare 另一个极其 bug 的好处是，可以半挽救被墙的 VPS。个人 VPS 被墙，一般并不是因为建立的个人主页散布了什么作死的言论，更多时候只是因为用 SS 上谷歌学术查论文太勤所致，因此一般被墙的是 IP 而非域名。那么用 CloudFlare 解析域名，由于 CloudFlare 的加速服务器在国外，访问 VPS 是无碍的，即便作死把 IP 玩坏了，好歹建的网站还能访问。另外，由于 CloudFlare 的 CDN 属性，即便 IP 自由访问，走 CloudFlare 也能让访问速度提高不少。根据实际情况在 DNS 菜单下进行设置即可。</p>
+<h3 id="图床从七牛云迁移到腾讯云"><a href="#图床从七牛云迁移到腾讯云" class="headerlink" title="图床从七牛云迁移到腾讯云"></a>图床从七牛云迁移到腾讯云</h3><p>其实 GitHub 托管的静态网页，原本就是支持 HTTPS 的，只是图片的外链当时选择了七牛云的对象存储服务。七牛云提供一个限制功能的 HTTP 协议 CDN 域名作为外链访问用。这就直接导致了当用 HTTPS 访问这个博客时，由于外链了 HTTP 资源，浏览器会给出安全警示。而绑定 HTTPS CDN 域名，不但流量收费，而且需要自己提供一个备案域名，未免太过麻烦。于是又百度了一天，希望找到一个免费的、带 HTTPS CDN 的对象存储服务。别说，还真在腾讯云给找着了。</p>
+<p>也不知道腾讯云的免费对象存储空间是否永久免费，毕竟有朝一日取消免费的话，迁移起来还是挺麻烦的。但腾讯云的对象存储实在太过良心了，50 G 免费空间，10 G 外网直出流量，10 G CDN 流量，不可谓不奢华。一开始以为腾讯云的对象存储不能像七牛云那样方便的添加图片处理样式。后来才发现腾讯云把这个功能单独分离出来叫做 <a target="_blank" rel="noopener" href="https://cloud.tencent.com/product/ci?idx=1">万象优图</a>。不仅如此，腾讯云还提供了一个非常便利的 <a target="_blank" rel="noopener" href="https://cloud.tencent.com/document/product/436/15392">迁移工具</a>，支持从多种其他平台的对象存储迁移，非常方便。而以上这些都不是重点，最最最最重要的是，万象优图分配的直出和 CDN 域名，都支持 HTTPS 访问！尽管七牛云的 HTTPS CDN 费用极低，可蚊子腿也是肉啊。眼前的诱惑如此巨大，管它以后收不收费呢，先用着！</p>
+<p>借助 CloudFlare 和腾讯云，总算把几个网页都迁移到 HTTPS 了。</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>, <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/VPS/">VPS</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CloudFlare/" rel="tag">CloudFlare</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="tag">服务器</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%87%8C%E7%A8%8B%E7%A2%91/" rel="tag">里程碑</a></li></ul>
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/07/27/%E5%88%A9%E7%94%A8-CloudFlare-CDN-%E7%BB%99-GitHub-Pages-%E5%8A%A0%E9%80%9F/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          利用 CloudFlare CDN 给 GitHub Pages 加速
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/01/15/18-%E5%A4%B4%E4%B8%A4%E5%91%A8-%E6%A2%AF%E5%AD%90%E6%8B%86%E4%BA%86%EF%BC%8C%E6%81%A2%E5%A4%8D%E6%8A%98%E8%85%BE%EF%BC%81/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">18 头两周 梯子拆了，恢复折腾！</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%9F%E5%90%8D%E6%9B%B4%E6%94%B9"><span class="nav-number">1.</span> <span class="nav-text">域名更改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%90%AC%E7%93%A6%E5%B7%A5%E6%9C%8D%E5%8A%A1%E5%99%A8-IP-%E6%9B%B4%E6%94%B9"><span class="nav-number">2.</span> <span class="nav-text">搬瓦工服务器 IP 更改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%91-HTTPS-%E8%BF%81%E7%A7%BB"><span class="nav-number">3.</span> <span class="nav-text">向 HTTPS 迁移</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CloudFlare"><span class="nav-number">3.1.</span> <span class="nav-text">CloudFlare</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BE%E5%BA%8A%E4%BB%8E%E4%B8%83%E7%89%9B%E4%BA%91%E8%BF%81%E7%A7%BB%E5%88%B0%E8%85%BE%E8%AE%AF%E4%BA%91"><span class="nav-number">3.2.</span> <span class="nav-text">图床从七牛云迁移到腾讯云</span></a></li></ol></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2022 ZC不在朋友圈 All Rights Reserved.
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+    
+<div style="display: none;">
+  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+<script src="/js/bootstrap.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+  
+
+</body>
+</html>
